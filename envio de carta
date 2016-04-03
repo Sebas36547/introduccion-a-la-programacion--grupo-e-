@@ -1,0 +1,36 @@
+// envio carta.cpp : Defines the entry point for the console application.
+//
+
+#include "stdafx.h"
+#include <iostream>
+#include "conio.h"
+using namespace std;
+void main()
+{
+	int peso;
+	cout<< "ingrese peso de la carta: ";
+	cin>>peso;
+	if (peso<0){
+		cout<< "valor invalido";}
+	else{
+		if (peso<=50){
+			cout<<"el costo es 1.50";}
+		else{
+			if(peso<=100){
+				cout<<"el costo es 4.00";}
+			else{
+				if(peso<=200){
+					cout<<"el costo es 6.00";}
+				else{
+					if(peso<=350){
+						cout<<"el costo es 10.50";}
+					else{
+						if(peso<=500){
+							cout<<"el costo es 15.00";}
+						else{
+							if(peso>500){
+								cout<<"no puede enviar";}}}}}}}
+
+
+	getch();
+}
