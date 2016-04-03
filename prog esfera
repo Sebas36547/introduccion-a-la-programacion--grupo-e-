@@ -1,0 +1,29 @@
+// esfera.cpp : Defines the entry point for the console application.
+//
+
+#include "stdafx.h"
+#include <iostream>
+#include "conio.h"
+
+using namespace std;
+
+void main ()
+{  
+	float diametro;
+	float circunferencia,area,volumen;
+
+	cout<<"ingrese el diametro: ";
+	cin>>diametro;
+	
+	circunferencia=3.141516*diametro;
+	cout<<"la circunferencia es: "<<circunferencia<<endl;
+	getch ();
+
+	area=4*3.151516*(diametro/2)*(diametro/2);
+	cout<<"el area es: "<<area<<endl;
+	getch ();
+
+	volumen=(4*3.141516)/3*(diametro/2)*(diametro/2)*(diametro/2);
+    cout<<"el volumen es: "<<volumen<<endl;
+	getch ();
+}
