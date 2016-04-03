@@ -1,0 +1,30 @@
+// convertidor formato hora.cpp : Defines the entry point for the console application.
+//
+
+#include "stdafx.h"
+#include <iostream>
+#include "conio.h"
+
+using namespace std;
+
+void main()
+{
+	float hora,minuto,segundo,hora1,hora2;
+	cout<<"Ingrese la hora: ";
+	cin>>hora;
+	   cout<<"ingrese los minutos: ";
+	   cin>>minuto;
+	   cout<<"ingrese los segundos: ";
+	   cin>>segundo;
+
+		 hora1=hora;
+		hora2=hora-12;
+
+	   if (hora>12)
+		   cout<<"La hora es: "<<hora2<< ":" <<minuto<< ":" <<segundo<< "/PM";
+	   else 
+		   cout<<"La hora es: "<<hora1<< ":" <<minuto<< ":" <<segundo<< "/AM";
+	   
+	   getch();    
+   
+}
