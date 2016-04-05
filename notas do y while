@@ -1,0 +1,44 @@
+// notasdo.cpp : Defines the entry point for the console application.
+//
+
+#include "stdafx.h"
+#include <iostream>
+#include "conio.h"
+#include "stdlib.h"
+
+using namespace std;
+
+void main()
+
+{
+	int i,nr;
+	char resp;//declarar una variable q acepta letras
+	float pr,par1,par2,par3,ef,promedio,nf;
+	i=0;
+	promedio=0;
+
+	do	{
+		cout<<"Ingrese la nota practica: " << endl;
+			cin>>pr;
+		cout<<"Ingrese la nota del primer parcial: "<< endl;
+			cin>>par1;
+		cout<<"Ingrese la nota del segundo parcial: "<< endl;
+			cin>>par2;
+		cout<<"Ingree la nota del tercer parcial: "<< endl;
+			cin>>par3;
+		cout<<"Ingrese la nota del examen final: "<< endl;
+			cin>>ef;
+
+		nf=(pr*0.2)+(((par1+par2+par3)/3)*0.4)+(ef*0.4);
+		//cout<<"la nota final es: "<<nf<<endl;
+		promedio=promedio+nf;
+		
+		i++; // 1<- i+1 contador
+			cout<<"Desea continuar: ('n' para finalizar) " << endl;
+			cin>>resp;
+		system("cls");
+	} while (resp != 'n');
+				cout<<"El promedio de nota en los estudiantes es: "<<promedio/i;
+	getch();
+
+}
