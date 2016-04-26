@@ -1,0 +1,46 @@
+// ciclosanidados.cpp : Defines the entry point for the console application.
+//
+
+#include "stdafx.h"
+#include <iostream>
+#include "conio.h"
+#include <string>
+
+using namespace std;
+
+void main()
+{
+	int aux, codigo, numprestamo,i;
+	float  montoprestamo,montoe, montototal;
+	string nombre;
+	montototal=0;
+	cout << "Ingrese el Codigo del empleado:  (se termina en -999) ";
+	cin  >> codigo;
+	while (codigo!= -999)
+	{
+		aux=codigo;
+		montoe=0;
+		
+		while (aux == codigo)
+		{
+		
+			cout << "Ingrese el Nombre del Empleado:  ";
+		    cin  >> nombre;
+		    cout << "Ingrese el numero de Prestamos:  ";
+		    cin  >> numprestamo;
+	        cout << "Ingrese el Monto del prestamo:  ";
+		     cin  >> montoprestamo;
+		     montoe=montoe+montoprestamo;
+			
+			 cout << "Ingrese el codigo del empleado:  ";
+		     cin  >> codigo;
+		}
+
+		cout <<"Empleado "<< aux <<" monto prestado:  " << montoe << endl;
+		
+
+		montototal=montototal+montoe;
+	}
+	cout<<"el monto prestado a los empleados es: "<<montototal;
+	getch();
+}
