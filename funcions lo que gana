@@ -1,0 +1,29 @@
+// porgrama.cpp : Defines the entry point for the console application.
+//
+
+#include "stdafx.h"
+#include <iostream>
+#include "conio.h"
+
+using namespace std;
+
+float $$$$$$$$ (float hora, float costo);
+
+void main() {
+    float hora,costo,ganado;	
+    cout <<"Ingrese el numero de horas:" ;
+	cin >>hora;	
+    cout <<"Ingrese el costo por horas:"; 
+	cin >> costo;	
+    ganado= $$$$$$$$ (hora,costo);
+    cout<<"La ganancia es:" <<ganado<<"$";  
+	getch();  
+    	
+ }
+float $$$$$$$$ (float hora, float costo)
+ { float ganancia;
+		ganancia= costo*hora ;
+		
+    return ganancia;  
+	
+}
