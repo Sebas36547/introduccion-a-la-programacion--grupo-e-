@@ -1,0 +1,72 @@
+// ojbvgt.cpp : Defines the entry point for the console application.
+//
+
+#include "stdafx.h"
+#include <iostream>
+#include "conio.h"
+
+using namespace std;
+
+float facn (float n);
+float facr (float r);
+float facrn (float n, float r);
+
+void main()
+
+{   
+	float n,r,c;
+	cout<<"Ingrese el valor de n: ";
+	cin>>n;
+	do {
+		cout<<"Ingrese el valor de r: ";
+		cin>>r;
+	}while(r>n);
+
+	c=(facn(n))/((facr(r))*(facrn(n,r)));
+
+	cout<<"El valor que se obtiene es: "<<c<<endl;
+		getch();
+
+}
+
+float facn (float n)
+
+{	float factorialn;
+	int i;
+	
+	factorialn=1;
+	for(i=1;i<=n;i++)
+	{
+		factorialn=factorialn*i;
+	}
+
+	return factorialn;
+}
+
+float facr (float r)
+
+{	float factorialr;
+	int i;
+	
+	factorialr=1;
+	for(i=1;i<=r;i++)
+	{
+		factorialr=factorialr*i;
+	}
+
+	return factorialr;
+}
+
+float facrn (float n, float r)
+{
+	float factorialrn;
+	int i,o;
+		o=n-r;
+			factorialrn=1;
+			for(i=1;i<=o;i++)
+			{
+				factorialrn=factorialrn*i;
+			}
+
+		return factorialrn;
+}
