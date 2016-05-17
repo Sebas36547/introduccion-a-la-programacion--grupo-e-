@@ -1,0 +1,47 @@
+// minimovalor.cpp : Defines the entry point for the console application.
+//
+
+#include "stdafx.h"
+#include <iostream>
+#include "conio.h"
+#define MAX 100
+
+using namespace std;
+
+void cargar (double a[], int tam);
+int comparar(double a[],int tam);
+
+void main ()
+{
+	double vec[MAX];
+	int n,menor;
+	do
+	{
+		cout<<"Ingrese el numero de elementos del vector: ";
+		cin>>n;
+	}while ((0>=n)||(n>=100));
+	cargar (vec,n);
+	menor=comparar(vec,n);
+	cout<<"El numero menor es: "<<menor;
+	getch();
+}
+
+void cargar (double a[], int tam)
+{
+	for(int i=0;i<tam;i++)
+	{
+			do{	cout<<"a["<<i<<"]= ";
+				cin>> a[i];
+		}while(a[i]<0);
+
+	}
+}
+int comparar(double a[],int tam)
+{	int d,c,f;
+	c=a[0];
+	
+	for(int i=0;i<tam;i++)
+		if(a[i]<c)
+			c=a[i];
+	return c;
+}
