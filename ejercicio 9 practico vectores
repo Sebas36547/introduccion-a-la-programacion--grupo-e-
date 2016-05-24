@@ -63,7 +63,7 @@ void mostrar3 (double a[], double b[], int tam,int tam2)
 		for(int i=0;i<tam;i++)
 		 cout<<"c["<<i<<"]= "<<a[i]<<endl;
 				
-	p=tam+1;	
+	p=tam;	
 
 	for(int i=0;i<tam2;i++)
 	 {	
