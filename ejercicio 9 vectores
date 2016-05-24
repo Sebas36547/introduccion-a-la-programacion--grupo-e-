@@ -1,0 +1,117 @@
+// ejercicio.cpp : Defines the entry point for the console application.
+//
+
+#include "stdafx.h"
+#include <iostream>
+#include "conio.h"
+#include "stdlib.h"
+#define MAX 100
+#define GEN 100
+
+using namespace std;
+
+void cargar (double a[], int tam);
+void cargar2 (double b[], int tam2);
+void mostrar3 (double a[], double b[], int tam,int tam2);
+void mostarab (double a[], double b[], int tam,int tam2);
+
+void main ()
+{
+	double vec[MAX],vec2[GEN];
+	int n,n2,opcion;
+	
+do{
+	cout<<"Pasos ejercicio 9"<<endl;
+	cout<<"1. Cargar vector a"<<endl;
+	cout<<"2. cargar vector b"<<endl;
+	cout<<"3. mostrar"<<endl;
+	cout<<"4. Resultado"<<endl;
+	cout<<"0. salir"<<endl;
+	cout<<" Elige una opcion: ";
+	cin>>opcion;
+	switch(opcion)
+	{	case 1: 
+	{
+			do{	cout<<"Ingrese el numero de elementos del vector a: ";
+				cin>>n;
+			}while ((0>=n)||(n>=100));
+			cargar (vec,n);break;
+	}
+	case 2: {
+
+			do{
+			cout<<"Ingrese el numero de elementos del vector b: ";
+				cin>>n2;
+			}while ((0>=n)||(n>=100));
+			cargar2 (vec2,n2);
+
+			}break;
+		case 3: 
+		{	mostarab(vec,vec2,n,n2);
+			getch();
+		}break;
+		case 4:
+		{
+			mostrar3 (vec,vec2,n,n2);
+			getch();
+		}break;
+		case 0: { cout<<"salir"<<endl;
+				}
+		default: cout << "Opcion invalida" << endl;
+}
+	
+	system ("cls");
+	 } while (opcion != 0);
+}
+
+void cargar (double a[], int tam)
+{
+	for(int i=0;i<tam;i++)
+	{
+			do{	cout<<"a["<<i<<"]= ";
+				cin>> a[i];
+		}while(a[i]<0);
+
+	}
+}
+
+
+void cargar2 (double b[], int tam2)
+{
+	for(int i=0;i<tam2;i++)
+	{
+			do{	cout<<"b["<<i<<"]= ";
+				cin>> b[i];
+		}while(b[i]<0);
+
+	}
+}
+
+void mostrar3 (double a[], double b[], int tam,int tam2)
+{int p;
+	cout <<"vector c"<< endl;
+		for(int i=0;i<tam;i++){
+		 cout<<"c["<<i<<"]= "<<a[i]<<endl;
+		}
+	p=tam;	
+
+	for(int i=0;i<tam2;i++)
+	 {	
+		 cout<<"c["<<p<<"]= "<<b[i]<<endl;
+		 p=p+1;
+	}
+		
+}
+void mostarab (double a[], double b[], int tam,int tam2)
+{	
+	cout <<"vector a"<< endl;
+			for(int i=0;i<tam;i++){
+		 cout<<"a["<<i<<"]= "<<a[i]<<endl;
+			}
+			cout<<" "<<endl;
+
+			cout <<"vector b"<< endl;
+			for(int i=0;i<tam2;i++){
+		 cout<<"b["<<i<<"]= "<<b[i]<<endl;
+			}
+}
