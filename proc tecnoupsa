@@ -1,0 +1,75 @@
+// condominio.cpp : Defines the entry point for the console application.
+//
+
+#include "stdafx.h"
+#include <iostream>
+#include "conio.h"
+
+using namespace std;
+
+void main()
+{
+	int n,op,a,q,w;
+	do{
+	cout<<"opcion menu:"<<endl;
+	cout<<"1.opcion:"<<endl;
+	cout<<"2.opcion:"<<endl;
+	cout<<"3.opcion:"<<endl;
+	cout<<"4.opcion:"<<endl;
+	cout<<"0.salir:"<<endl;
+	cin>>op;
+
+
+     switch (op)
+	{
+	 case 1:
+		 {
+			cout<<"1.problemas con la cancha:"<<endl;
+	        cout<<"2.basura por recojer:"<<endl;
+	        cout<<"3.:"<<endl;
+	        cout<<"4.opcion:"<<endl;
+	        cout<<"0.salir:"<<endl;
+		 }break;
+	 case 2:
+		 {
+           cout<<"1.opcion:"<<endl;
+	       cout<<"2.opcion:"<<endl;
+	       cout<<"3.opcion:"<<endl;
+	       cout<<"4.opcion:"<<endl;
+	       cout<<"0.salir:"<<endl;
+		 }break;
+	 case 3:
+		 {
+           cout<<"1.opcion:"<<endl;
+	       cout<<"2.opcion:"<<endl;
+	       cout<<"3.opcion:"<<endl;
+	       cout<<"4.opcion:"<<endl;
+	       cout<<"0.salir:"<<endl;
+		 }break;
+
+	 case 4:
+		 {
+	       cout<<"1.opcion:"<<endl;
+	       cout<<"2.opcion:"<<endl;
+	       cout<<"3.opcion:"<<endl;
+	       cout<<"4.opcion:"<<endl;
+	       cout<<"0.salir:"<<endl;
+		 }break;
+
+	 case 0:
+		 {
+		 cout<<"salir del programa"<<endl;
+		 }break;
+	 default:{
+		 cout<<"valor invalido"<<endl;
+		 getch();
+		 break;
+			 }
+	 }
+	 
+}while(op!=0);
+	getch();
+}
+
+
+	 
